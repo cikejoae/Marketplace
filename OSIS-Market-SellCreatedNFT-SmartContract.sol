@@ -1,13 +1,7 @@
 // SPDX-License-Identifier: MIT LICENSE
 
 /*
-N2D Marketplace Sell Created NFT Smart Contract
-THIS CONTRACT IS AVAILABLE FOR EDUCATIONAL 
-PURPOSES ONLY. YOU ARE SOLELY REPONSIBLE 
-FOR ITS USE. I AM NOT RESPONSIBLE FOR ANY
-OTHER USE. THIS IS TRAINING/EDUCATIONAL
-MATERIAL. ONLY USE IT IF YOU AGREE TO THE
-TERMS SPECIFIED ABOVE.
+Marketplace Sell Created NFT Smart Contract
 
 Revision v2
 
@@ -23,7 +17,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 
-contract n2DMarket is ReentrancyGuard, Ownable {
+contract OSISMarketplace is ReentrancyGuard, Ownable {
   using Counters for Counters.Counter;
   Counters.Counter private _itemIds;
   Counters.Counter private _itemsSold;
@@ -71,7 +65,7 @@ contract n2DMarket is ReentrancyGuard, Ownable {
     IERC721(nftContract).transferFrom(msg.sender, address(this), tokenId);
     emit VaultItemCreated(itemId,nftContract,tokenId,msg.sender,address(0),price,false);}
 
-  function n2DMarketSale(
+  function OSISMarketSale(
     address nftContract,uint256 itemId) public payable nonReentrant {
     uint price = idToVaultItem[itemId].price;
     uint tokenId = idToVaultItem[itemId].tokenId;

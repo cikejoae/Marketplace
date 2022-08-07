@@ -1,13 +1,7 @@
 // SPDX-License-Identifier: MIT OR Apache-2.0
 
 /*
-N2D Marketplace Create NFT Smart Contract
-THIS CONTRACT IS AVAILABLE FOR EDUCATIONAL 
-PURPOSES ONLY. YOU ARE SOLELY REPONSIBLE 
-FOR ITS USE. I AM NOT RESPONSIBLE FOR ANY
-OTHER USE. THIS IS TRAINING/EDUCATIONAL
-MATERIAL. ONLY USE IT IF YOU AGREE TO THE
-TERMS SPECIFIED ABOVE.
+Marketplace Create NFT Smart Contract
 
 Revision v2
 
@@ -22,13 +16,13 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract N2DNFT is ERC721URIStorage, Ownable {
+contract OSISNFT is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter public _tokenIds;
     address contractAddress;
     uint256 public cost = 0.0075 ether;
 
-    constructor(address marketContract) ERC721("n2DMarket", "N2DM") {
+    constructor(address marketContract) ERC721("OSISMarketplace", "OSISMKT") {
         contractAddress = marketContract;
     }
 

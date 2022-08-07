@@ -162,9 +162,9 @@ export default function createMarket() {
               <Spacer></Spacer>
                 <Spacer></Spacer>
                 <Text h3 className='ml-3'>The NFT Marketplace with a Reward.</Text>
-                <Text h3>N2DR IS More Than A Token</Text>
+                <Text h3>OSIS IS More Than A Token</Text>
                 <Spacer></Spacer>
-                <img src='n2dr-logo.png' width={"300px"} />
+                <img src='osis.png' width={"300px"} />
               </Col>
               <Col css={{ marginRight: '$7' }}>
               <Spacer></Spacer>
@@ -217,7 +217,7 @@ export default function createMarket() {
               <Container css={{ marginBottom: '$2' }}>
                 <Input
                   css={{ marginTop: '$2' }}
-                  placeholder="Set your price in N2DR"
+                  placeholder="Set your price in OSIS"
                   onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
                 />
                 <Button size="sm" style={{ fontSize: '20px' }} onPress={createMarket} css={{ marginTop: '$2', marginBottom: '$5', color:'$gradient' }}>
