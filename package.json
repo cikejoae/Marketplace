@@ -1,1 +1,38 @@
-{"type": "commonjs"}
+{
+  "name": "osismarketplace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@metamask/detect-provider": "^1.2.0",
+    "@nextui-org/react": "^1.0.0-beta.9",
+    "axios": "^0.27.2",
+    "ipfs-http-client": "^57.0.3",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sf-font": "^1.0.0",
+    "simple-crypto-js": "^3.0.1",
+    "web3": "^1.7.5",
+    "web3modal": "^1.9.8"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@types/react": "^18.0.16",
+    "canvas-confetti": "^1.5.1",
+    "chai": "^4.3.6",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.9",
+    "hardhat": "^2.10.1",
+    "react-multi-carousel": "^2.8.2",
+    "webpack": "^5.74.0"
+  }
+}
