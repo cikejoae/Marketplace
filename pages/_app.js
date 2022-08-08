@@ -1,8 +1,11 @@
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 import 'sf-font';
 import Link from 'next/link'
-import { Spacer, Button, Col, Row, Container, Dropdown } from '@nextui-org/react';
-import react from "react";
+import { Button, Col, Row, Container } from '@nextui-org/react';
+import Footer from './footer';
+import Connectchain from "../engine/connectchain";
+/* eslint-disable @next/next/no-img-element */
+
 
 const theme = createTheme({
   type: "dark",
@@ -40,7 +43,7 @@ function MyApp({ Component, pageProps }) {
             <Container lg css={{marginTop:'$5'}}>
             <Row justify="center">
             <Col css={{ marginTop: '$8' }}>
-              <img style={{width:'220px'}} src="n2DMarket.png" />
+              <img style={{width:'220px'}} src="apotheosis.png" alt={""}/>
             </Col>
             <Col css={{ marginTop: '$8' }} >
             <Link href="/">
@@ -73,6 +76,21 @@ function MyApp({ Component, pageProps }) {
             <Col css={{ marginTop: '$8' }} >
             <Button size="sm"
             style={{background:'#00000070', boxShadow:'0px 0px 4px #ffffff'}}>
+                <Link href="/create">
+                  <a style={{
+                    fontFamily: 'SF Pro Display',
+                    fontWeight: '500',
+                    color: 'white',
+                    fontSize: '20px'
+                  }}>
+                    Create Portal
+                  </a>
+                </Link>
+              </Button>
+            </Col>
+            <Col css={{ marginTop: '$8' }} >
+            <Button size="sm"
+            style={{background:'#00000070', boxShadow:'0px 0px 4px #ffffff'}}>
                 <Link href="/portal">
                   <a style={{
                     fontFamily: 'SF Pro Display',
@@ -85,11 +103,15 @@ function MyApp({ Component, pageProps }) {
                 </Link>
               </Button>
             </Col>
+            < Connectchain />
             </Row>
  </Container>
- <NextUIProvider>
+ <NextUIProvider theme={theme} >
 <Component {...pageProps} />
 </NextUIProvider>
+<Footer>
+  <Footer/>
+</Footer>
 </div>
 </div>
 
